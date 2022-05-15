@@ -1,5 +1,4 @@
-import { storeState, changeState, jock, cheerleader, nerd } from './../src/js/student';
-
+import { storeState, changeState, jock, cheerleader, nerd, changeHealth } from './../src/js/student';
 
 // const stateControl = storeState(); 
 let jockStateControl
@@ -36,22 +35,11 @@ describe('storeState', () => {
   });
 });
 
-// describe('changeState', () => {
-//   test('should return default state health of 10', () => {
-//     const resultState = stateControl();
-//     expect(resultState.health).toEqual(10);
-//   });
-//   test('should set state health to 10', () => {
-//     const addHealth = changeState("health")(10);
-//     const newState = stateControl(addHealth);
-//     const resultState = stateControl();
-//     expect(resultState.health).toEqual(20);
-//   });
-//   test('should set state brain to 2', () => {
-//     const addBrain = changeState("brain")(1);
-//     const newState = stateControl(addBrain);
-//     const resultState = stateControl();
-//     expect(resultState.brain).toEqual(2);
-//   });
-// });
+describe('changeState', () => {
+  test('should drop health from 10 to 5', () => {
+    const newState = jockStateControl(changeHealth(-5));
+    const resultState = jockStateControl();
+    expect(resultState.health).toEqual(5);
+  });
+});
 
