@@ -20,10 +20,11 @@ export const changeState = (prop) => {
   };
 };
 
-// const brain = changeState()
-// const beauty = changeState()
-// const braun = changeState()
+// changeState functions
 
+export const changeHealth = changeState("health");
+
+//Classes
 
 export const jock = {health: 10, brain: 1, beauty: 1, braun: 2};
 export const cheerleader = {health: 10, brain: 1, beauty: 2, braun: 1};

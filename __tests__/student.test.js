@@ -1,6 +1,5 @@
 import { storeState, changeState, jock, cheerleader, nerd, changeHealth } from './../src/js/student';
 
-// const stateControl = storeState(); 
 let jockStateControl
 let nerdStateControl
 let cheerleaderStateControl
