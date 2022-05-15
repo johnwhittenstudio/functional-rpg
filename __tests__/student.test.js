@@ -1,4 +1,4 @@
-import { storeState, changeState, jock, cheerleader, nerd, changeHealth } from './../src/js/student';
+import { storeState, changeState, jock, cheerleader, nerd, changeHealth, addBrain, addBeauty, addBraun } from './../src/js/student';
 
 let jockStateControl
 let nerdStateControl
@@ -35,10 +35,30 @@ describe('storeState', () => {
 });
 
 describe('changeState', () => {
+  test('should be able to use full changeState curry', () => {
+    const newState = jockStateControl(changeState("test")(-5));
+    const resultState = jockStateControl();
+    expect(resultState.test).toEqual(-5);
+  });
   test('should drop health from 10 to 5', () => {
     const newState = jockStateControl(changeHealth(-5));
     const resultState = jockStateControl();
     expect(resultState.health).toEqual(5);
+  });
+  test('should increase brain from 1 to 2', () => {
+    const newState = jockStateControl(addBrain);
+    const resultState = jockStateControl();
+    expect(resultState.brain).toEqual(2);
+  });
+  test('should increase beauty from 1 to 2', () => {
+    const newState = jockStateControl(addBeauty);
+    const resultState = jockStateControl();
+    expect(resultState.beauty).toEqual(2);
+  });
+  test('should increase braun from 2 to 3', () => {
+    const newState = jockStateControl(addBraun);
+    const resultState = jockStateControl();
+    expect(resultState.braun).toEqual(3);
   });
 });
 

@@ -23,6 +23,9 @@ export const changeState = (prop) => {
 // changeState functions
 
 export const changeHealth = changeState("health");
+export const addBrain = changeState("brain")(1);
+export const addBeauty = changeState("beauty")(1);
+export const addBraun = changeState("braun")(1);
 
 //Classes
 
