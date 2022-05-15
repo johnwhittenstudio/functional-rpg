@@ -41,9 +41,9 @@ Character Creation:
 
 Player stats
   Popularity (Health)
-  Brain (Intelligence)
-  Beauty (Charisma)
-  Brawn (Strength)
+  Nerd - Brain (Intelligence)
+  Cheerleader - Beauty (Charisma)
+  Jock - Braun (Strength)
 
 
 Battle System:
@@ -72,7 +72,6 @@ Inventory system:
 
   Defence items
     increase defence mitigation by 1
-
 
   Health items
     increase defence mitigation by ?
