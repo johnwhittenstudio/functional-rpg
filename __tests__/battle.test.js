@@ -12,7 +12,7 @@ beforeEach(() => {
   cheerleaderStateControl = storeState(cheerleader);
 });
 
-describe("battle", () => {
+describe("addFight", () => {
   test("should increase fight by 1", () => {
     const newState = jockStateControl(addFight);
     const currentState = jockStateControl();
