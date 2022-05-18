@@ -1,4 +1,5 @@
-import { storeState, changeState, jock, cheerleader, nerd, changeHealth, addBrain, addBeauty, addBraun } from './../src/js/student';
+import { jock, cheerleader, nerd, changeHealth, addBrain, addBeauty, addBraun } from './../src/js/student.js';
+import { changeState, storeState } from '../src/js/functionfactory.js';
 
 let jockStateControl
 let nerdStateControl

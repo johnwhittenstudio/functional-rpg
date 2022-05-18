@@ -50,13 +50,13 @@ Battle System:
 
 Fight Mechanics
   Attack
-    outwit
-    charm
-    punch
+    outwit - brains 
+    charm - beauty
+    punch - braun
   Defend
-    dodge
-    pout
-    block
+    dodge - brains
+    pout - beauty
+    block - braun
   Retreat
 
 If players popularity drops to zero player loses
