@@ -1,4 +1,4 @@
-import { jock, cheerleader, nerd, changeHealth, addBrain, addBeauty, addBraun } from './../src/js/student.js';
+import { jock, cheerleader, nerd, changeHealth, addBrain, addBeauty, addBraun, refillHealth } from './../src/js/student.js';
 import { changeState, storeState } from '../src/js/functionfactory.js';
 
 let jockStateControl
@@ -62,4 +62,15 @@ describe('changeState', () => {
     expect(resultState.braun).toEqual(3);
   });
 });
+
+describe('refillHealth', () => {
+  test('should increase health to 10', () => {
+    const newState = jockStateControl(changeHealth(-5));
+    const fillState = refillHealth(newState, jockStateControl);
+    const resultState = jockStateControl();
+    expect(resultState.health).toEqual(10);
+  });
+
+});
+
 
